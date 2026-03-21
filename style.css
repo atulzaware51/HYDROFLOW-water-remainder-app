@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E0F7FA; /* Light cyan background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #004D40; /* Teal 900 */
+}
+
+.card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 20px;
+    padding: 40px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.15); /* Floating shadow */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.drop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Prevents the card from shifting when drop grows */
+    margin-bottom: 50px;
+}
+
+.water-drop {
+    color: #0097A7; 
+    width: 60px;
+    height: 60px;
+    background-color: #B2EBF2; 
+    border-radius: 50%;
+    padding: 15px;
+    /* The magic bouncing animation */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn {
+    background-color: #00BCD4; /* Cyan */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px; /* Pill shape */
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Snackbar (Notification) Styling */
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #00796B; 
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+}
+
+/* Added to show the popup */
+.snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
+}
